@@ -5,35 +5,30 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import jp.ac.it_college.std.s22007.navigationsample.R
-import jp.ac.it_college.std.s22007.navigationsample.databinding.FragmentHomeBinding
+import androidx.navigation.fragment.navArgs
+import jp.ac.it_college.std.s22007.navigationsample.databinding.FragmentThirdBinding
 
-class HomeFragment : Fragment() {
-    private var _binding: FragmentHomeBinding? = null
-
+class ThirdFragment : Fragment() {
+    private var _binding: FragmentThirdBinding? = null
     private val binding get() = _binding!!
 
+    private val args: ThirdFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentThirdBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.homeToNext.setOnClickListener { toNext() }
+        binding.textView.text = "<${args.choise}>"
     }
-
     override fun onDestroyView() {
         _binding = null
         super.onDestroyView()
     }
 
-    private fun toNext(){
-        val action = HomeFragmentDirections.actionHomeFragmentToSecondFragment()
-        findNavController().navigate(action)
-    }
+
 }
