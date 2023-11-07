@@ -1,5 +1,4 @@
 package jp.ac.it_college.std.s22007.composesample.ui.theme
-
 import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -10,10 +9,16 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+
+val Navy = Color(0xFF073042)
+val Blue = Color(0xFF4285F4)
+val LightBlue = Color(0xFFD7EFFE)
+val Charteruse = Color(0xFFEFF7CF)
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -22,7 +27,11 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
+    surface = Blue,
+    onSurface = Color.White,
+//    primary = Purple40,
+    primary = LightBlue,
+    onPrimary = Navy,
     secondary = PurpleGrey40,
     tertiary = Pink40
 
