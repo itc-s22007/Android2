@@ -26,15 +26,15 @@ private val ktorClient = HttpClient(CIO){
             socketTimeout = 5000
         }
     }
-    install(ContentNegotiation){
-        json(
-            Json{
-                ignoreUnknownKeys = true
-                prettyPrint = true
-                isLenient = true
-            }
-        )
-    }
+        install(ContentNegotiation){
+            json(
+                Json{
+                    ignoreUnknownKeys = true
+                    prettyPrint = true
+                    isLenient = true
+                }
+            )
+        }
 }
 
 class MainActivity : AppCompatActivity() {
