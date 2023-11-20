@@ -151,7 +151,7 @@ fun generateQuizData(generation: Int): List<PokeQuiz> {
         ),
         PokeQuiz(
             imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/926.png",
-            choices = listOf("ピカチュウ", "パピモッチ", "ポチエナ", "ウパー").shuffled(),
+            choices = listOf("ピカチュウ", "パピモッチ", "ポチエナ", "ワンパチ").shuffled(),
             correct = "パピモッチ"
         ),
         PokeQuiz(
@@ -166,7 +166,7 @@ fun generateQuizData(generation: Int): List<PokeQuiz> {
         ),
         PokeQuiz(
             imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/964.png",
-            choices = listOf("ナミイルカ", "イルカマン", "コダック", "カイオーガ").shuffled(),
+            choices = listOf("ナミイルカ", "イルカマン", "ランターン", "カイオーガ").shuffled(),
             correct = "イルカマン"
         ),
     ).shuffled()
